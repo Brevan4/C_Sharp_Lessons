@@ -22,19 +22,19 @@ namespace APD_Practical1
         {
             double[] C = { };
             double average;
-            double sum;
+            double sum = 0;
             double smallest = 10000000;
             double largest = -10000000;
 
-            for (int i = 0, i <= A.Length, i++)
+            for (int i = 0; i <= A.Length; i++)
             {
                 C[i] = A[i] / B[i];
             }
 
             //sum
-            for (int i = 0, i <= A.Length, i++)
+            for (int i = 0; i <= A.Length; i++)
             {
-                sum = sum + C[i] 
+                sum += sum + C[i]; 
             }
             //average
             average = sum / C.Length;
@@ -51,9 +51,9 @@ namespace APD_Practical1
             //largest value
             foreach (double i in C)
             {
-                if (i < smallest)
+                if (i < largest)
                 {
-                    smallest = i;
+                    largest = i;
                 }
             }
 

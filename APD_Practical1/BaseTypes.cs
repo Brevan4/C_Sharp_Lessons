@@ -1,4 +1,4 @@
-﻿nusing System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,24 +11,24 @@ namespace APD_Practical1
     {
         //1) Remove comments and assign correct datatypes bellow.
         
-        bool one = true;
-        bool two = false;
-        char three = 'Z';
-        string four = '\\';
-        int five = 100;
-        int six = 10000;
-        int seven = 1000000;
-        long eight = 10000000000L;
-        float nine = 3.14f;
-        double ten = 2.71828d;
+        bool One = true;
+        bool Two = false;
+        char Three = 'Z';
+        char Four = '\\';
+        int Five = 100;
+        int Six = 10000;
+        int Seven = 1000000;
+        long Eight = 10000000000L;
+        float Nine = 3.14f;
+        double Ten = 2.71828d;
 
 
         // 2) Attempted to cast each into types of boolean, char, integer, long, float.
         //one
-        int cast1 = one;
-        char cast2 = one;
-        long cast3 = one;
-        float cast4 = one;
+        int cast1 = One;
+        char cast2 = One;
+        long cast3 = One;
+        float cast4 = One;
 
         //three
         bool cast5 = three;
@@ -51,11 +51,11 @@ namespace APD_Practical1
         char cast18 = five;
 
         //eight
-        bool cast14 = five;
-        int cast15 = five;
-        long cast16 = five;
-        float cast17 = five;
-        char cast18 = five;
+        bool cast19 = five;
+        int cast20 = five;
+        long cast21 = five;
+        float cast22 = five;
+        char cast23 = five;
 
         // Comment which type of casting is applicable Ie implicit, explicit Not possible  
 
@@ -63,8 +63,8 @@ namespace APD_Practical1
         // add function to print each casting out
         static void printCast()
         {
-            Console.WriteLine(cast1);
-            Console.WriteLine(cast2);
+           // Console.WriteLine(cast1);
+            //Console.WriteLine(cast2);
             
         } 
 
