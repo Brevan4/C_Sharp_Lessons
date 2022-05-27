@@ -20,7 +20,47 @@ namespace APD_Practical1
         //The Largest value
         public void processArrays()
         {
+            double[] C = { };
+            double average;
+            double sum;
+            double smallest = 10000000;
+            double largest = -10000000;
 
+            for (int i = 0, i <= A.Length, i++)
+            {
+                C[i] = A[i] / B[i];
+            }
+
+            //sum
+            for (int i = 0, i <= A.Length, i++)
+            {
+                sum = sum + C[i] 
+            }
+            //average
+            average = sum / C.Length;
+
+            //smallest value
+            foreach (double i in C)
+            {
+                if (i < smallest)
+                {
+                    smallest = i;
+                }
+            }
+
+            //largest value
+            foreach (double i in C)
+            {
+                if (i < smallest)
+                {
+                    smallest = i;
+                }
+            }
+
+            Console.WriteLine("The average is " + average);
+            Console.WriteLine("The sum is " + sum);
+            Console.WriteLine("The smallest is" + smallest);
+            Console.WriteLine("The largest is" + largest);
         }
     }
 }
