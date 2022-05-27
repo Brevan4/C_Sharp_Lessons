@@ -34,7 +34,7 @@ namespace APD_Practical1
             bool b8 = myFloat;                  //Cannot implicitly convert
             bool b9 = myDouble;                 //Cannot implicitly convert
             */
-            Console.WriteLine($@"****BoolCast****
+            Console.WriteLine($@"******** BoolCast ********
 The only casts available for Booleans were b1 - {b1} and b2 - {b2}, which were already booleans.
 
 ");
@@ -50,7 +50,7 @@ The only casts available for Booleans were b1 - {b1} and b2 - {b2}, which were a
             char c6 = (char)myLong;             //Explicit
             char c7 = (char)myFloat;            //Explicit
             char c8 = (char)myDouble;           //Explicit
-            Console.WriteLine($@"****CharCast****
+            Console.WriteLine($@"******** CharCast ********
 Implicit cast
 c1 - {c1}
 c2 - {c2} 
@@ -75,7 +75,7 @@ c8 - {c8}
             int i6 = (int)myLong;               //Explicit
             int i7 = (int)myFloat;              //Explicit
             int i8 = (int)myDouble;             //Explicit
-            Console.WriteLine($@"****IntCast****
+            Console.WriteLine($@"******** IntCast ********
 Implicit cast
 i1 - {i1}
 i2 - {i2}
@@ -100,7 +100,7 @@ i8 - {i8}
             long l6 = myLong;                   //Already long
             long l7 = (long)myFloat;            //Explicit
             long l8 = (long)myDouble;           //Explicit
-            Console.WriteLine($@"****LongCast****
+            Console.WriteLine($@"******** LongCast ********
 Implicit cast
 l1 - {l1}
 l2 - {l2}
@@ -125,7 +125,7 @@ l8 - {l8}
             float f6 = myLong;                  //Implicit
             float f7 = myFloat;                 //Already float
             float f8 = (float)myDouble;         //Explicit
-            Console.WriteLine($@"****FloatCast****
+            Console.WriteLine($@"******** FloatCast ********
 Implicit cast
 f1 - {f1}
 f2 - {f2}
@@ -134,7 +134,7 @@ f4 - {f4}
 f5 - {f5}
 f6 - {f6}
 f7 - {f7}.
-Explicit cat
+Explicit cast
 f8 - {f8}
 
 ");
