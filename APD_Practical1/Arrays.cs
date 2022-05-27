@@ -8,6 +8,7 @@ namespace APD_Practical1
 {
     class Arrays
     {
+        //testing
         // The two starting arrays of 10 integers
         int[] A = { 124, 117, 478, 786, 111, 325, 422, 145, 523, 33 };
         int[] B = { 8, 9, 17, 4, 68, 56, 38, 77, 81, 2 };
