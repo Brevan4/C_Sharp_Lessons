@@ -11,6 +11,7 @@ namespace APD_Practical1
             BaseTypes.IntCast();
             BaseTypes.LongCast();
             BaseTypes.FloatCast();
+            Months.WhatMonth();
         }
        
     }
