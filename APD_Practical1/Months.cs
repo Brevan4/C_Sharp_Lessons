@@ -7,19 +7,19 @@ using System.Threading.Tasks;
 namespace APD_Practical1
 {
     
-    public enum Month
+    public enum Month                                       //Enum of months
         {
             January, February, March, April, May, June, July, August, September, October, November, December
         }
     class Months
     {
-        public static void WhatMonth()
+        public static void WhatMonth()                      //Method for user input
         {
 
             Console.WriteLine("Please enter the first 3 letters of any month of the year (eg. Jan, Feb, Mar): ");
             string userInput = Console.ReadLine();
                                     
-            switch (userInput)
+            switch (userInput)                              //Switch to select correct Enums and sentences
             {
                 case "Jan":
                     {
@@ -93,7 +93,7 @@ namespace APD_Practical1
                     }
                     break;
 
-                default:
+                default:                                        //Default set as error for invalid user input
                     {
                         Console.WriteLine("Invalid month selected.");
                     }
