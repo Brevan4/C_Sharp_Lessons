@@ -9,8 +9,6 @@ namespace APD_Practical2.arrayGenerator
     /**
  * This is an auxiliary class for checking generators
  *
- * @author Ilias Tachmazidis
- * @version September 2021
  */
     class CheckGenerator
     {
