@@ -24,13 +24,13 @@ namespace APD_Practical1
                 C[i] = arrayDivision;
             }
             {
-                Console.WriteLine("******** Array C ********");
+                Console.WriteLine("\n\n******** Array C ********");
                 Array.ForEach(C, Console.WriteLine);                                    //Prints out entire Array C
             }
         }          
         public static void PrintArrays()                                                //Method to print our Array details
             {
-            Console.WriteLine(@"******** Array details ********");
+            Console.WriteLine("\n\n******** Array details ********");
                 Console.WriteLine("The average of array A: " + A.Average());
                 Console.WriteLine("The highest value in array A: " + A.Max());
                 Console.WriteLine("The lowest value in array A: " + A.Min());

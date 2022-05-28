@@ -18,78 +18,79 @@ namespace APD_Practical1
 
             Console.WriteLine("Please enter the first 3 letters of any month of the year (eg. Jan, Feb, Mar): ");
             string userInput = Console.ReadLine();
+            userInput = userInput.ToLower();
                                     
             switch (userInput)                              //Switch to select correct Enums and sentences
             {
-                case "Jan":
+                case "jan":
                     {
-                        Console.WriteLine($"The first month of every year, {Month.January}");
+                        Console.WriteLine($"The first month of every year. It's {Month.January}.");
                     }
                     break;
 
-                case "Feb":
+                case "feb":
                     {
-                        Console.WriteLine($"The shortest month of the year,{Month.February}");
+                        Console.WriteLine($"The shortest month of the year. It's {Month.February}.");
                     }
                     break;
 
-                case "Mar":
+                case "mar":
                     {
-                        Console.WriteLine($"Heading forwards with a spring in your step, {Month.March}");
+                        Console.WriteLine($"Heading forwards with a spring in your step. It's {Month.March}.");
                     }
                     break;
 
-                case "Apr":
+                case "apr":
                     {
-                        Console.WriteLine($"Fools get to play, but for only half a day. {Month.April}");
+                        Console.WriteLine($"Fools get to play, but for only half a day. It's {Month.April}.");
                     }
                     break;
 
-                case "May":
+                case "may":
                     {
-                        Console.WriteLine($"Summer is right around the corner, {Month.May}");
+                        Console.WriteLine($"Summer is right around the corner. It's {Month.May}.");
                     }
                     break;
 
-                case "Jun":
+                case "jun":
                     {
-                        Console.WriteLine($"Happy Birthday to me and the boss, {Month.June}");
+                        Console.WriteLine($"Happy Birthday to me and the boss. It's {Month.June}.");
                     }
                     break;
 
-                case "Jul":
+                case "jul":
                     {
-                        Console.WriteLine($"Its marching season in my wee country, {Month.July}");
+                        Console.WriteLine($"Its marching season in my wee country. It's {Month.July}.");
                     }
                     break;
 
-                case "Aug":
+                case "aug":
                     {
-                        Console.WriteLine($"Enjoy the last few weeks of your time off kids, back to school soon. {Month.August}");
+                        Console.WriteLine($"Enjoy the last few weeks of your time off kids, back to school soon. It's {Month.August}.");
                     }
                     break;
 
-                case "Sep":
+                case "sep":
                     {
                         Console.WriteLine($"Do you remember? The 21st night of {Month.September}");
                     }
                     break;
 
-                case "Oct":
+                case "oct":
                     {
                         Console.WriteLine($"Time for some Halloween Spooktacular fun in {Month.October}");
                     }
                     break;
 
-                case "Nov":
+                case "nov":
                     {
-                        Console.WriteLine($"Where I am from we burn bonfires in July, for normal people its {Month.November}");
+                        Console.WriteLine($"Where I am from we burn bonfires in July, for normal people it's {Month.November}");
                     }
                     break;
 
-                case "Dec":
+                case "dec":
                     {
-                        Console.WriteLine($"Holidays are coming, holidays are coming...{Month.December}");
+                        Console.WriteLine($"Holidays are coming, holidays are coming... It's {Month.December}.");
                     }
                     break;
 
