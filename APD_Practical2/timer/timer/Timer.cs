@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,45 +24,45 @@ namespace APD_Practical2.timer.timer
      * @throws IndexingError if one of the timed searcher has an indexing error.
      *                          This shouldn't happen.
      *
-     */      
-    Timer getTimer(int size);
-
-    /**
-    * Nominate the timed method.  In an implementing class <tt>timedMethod</tt> will
-    * be a wrapper method for the method to be timed.
-    */
-    void timedMethod();
-
-    /**
-    * A main.java.timer.Timer object should specify the maximum length of time that a time test should run
-    * @return the maximum time that a single time test should run, in seconds
-    */
-    long getMaximumRuntime();
-
-    /**
-    * main.java.timer.Timer objects must also specify the minimum task size that they wish to see timed.
-    * @return the maximum task size to be timed
-    */
-    int getMinimumTaskSize();
-
-    /**
-     * main.java.timer.Timer objects must also specify the maximum task size that they wish to see timed.
-     * @return the maximum task size to be timed
      */
-    int getMaximumTaskSize();
+        Timer getTimer(int size);
 
-    /**
-     * Run the timed method belonging to an implementing class, and time how
-     * long it takes.
-     *
-     * @return the time taken to execute the method being timed, in nanoseconds
-     */
-    default Duration time()
-    {
-        long startTime = System.nanoTime();
-        timedMethod();
-        long endTime = System.nanoTime();
-        return Duration.ofNanos(endTime - startTime);
-    }
+        /**
+        * Nominate the timed method.  In an implementing class <tt>timedMethod</tt> will
+        * be a wrapper method for the method to be timed.
+        */
+        void timedMethod();
+
+        /**
+        * A main.java.timer.Timer object should specify the maximum length of time that a time test should run
+        * @return the maximum time that a single time test should run, in seconds
+        */
+        long getMaximumRuntime();
+
+        /**
+        * main.java.timer.Timer objects must also specify the minimum task size that they wish to see timed.
+        * @return the maximum task size to be timed
+        */
+        int getMinimumTaskSize();
+
+        /**
+         * main.java.timer.Timer objects must also specify the maximum task size that they wish to see timed.
+         * @return the maximum task size to be timed
+         */
+        int getMaximumTaskSize();
+
+        /**
+         * Run the timed method belonging to an implementing class, and time how
+         * long it takes.
+         *
+         * @return the time taken to execute the method being timed, in nanoseconds
+         */
+        protected TimeSpan time()
+        {
+            long startTime = Stopwatch.GetTimestamp();
+            timedMethod();
+            long endTime = Stopwatch.GetTimestamp();
+            return TimeSpan.FromMilliseconds(endTime - startTime);
+        }
     }
 }
