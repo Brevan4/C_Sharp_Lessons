@@ -9,7 +9,7 @@ namespace APD_Practical2.searcher
     //This is an auxiliary class for checking searchers
     class CheckSearcher
     {
-        public void RunCheckSearcher()
+        public static void Run()
         {
             Random ran = new Random();
             int size = 10;
