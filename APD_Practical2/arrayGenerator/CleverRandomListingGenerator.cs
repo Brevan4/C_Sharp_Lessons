@@ -12,7 +12,17 @@ namespace APD_Practical2.arrayGenerator
 
         protected override void randomise()
         {
-            //add your code here
+            int[] copy = getArray();
+            for(int index = 0; index < copy.Length; index++)
+            {                        
+                int randomIndex = getRandomIndex();
+                if (index != randomIndex)
+                {
+                    copy[randomIndex] = copy[index] + copy[randomIndex];
+                    copy[index] = copy[randomIndex] - copy[index];
+                    copy[randomIndex] = copy[randomIndex] - copy[index];
+                }
+            }            
         }      
     }    
 }

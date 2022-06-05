@@ -1,4 +1,4 @@
-﻿using APD_Practical2.arrayGenerator;
+using APD_Practical2.arrayGenerator;
 using APD_Practical2.timer.timer;
 using System;
 using System.Collections.Generic;

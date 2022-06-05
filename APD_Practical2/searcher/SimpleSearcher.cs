@@ -11,9 +11,13 @@ namespace APD_Practical2.searcher
         public SimpleSearcher(int[] array, int K): base(array, K) { }
         public override int findElement()
         {
-            // implement find element
-            throw new IndexingError();
             
+            // implement find element
+            int[] arrayClone = (int[]) array.Clone();
+            Array.Sort(arrayClone);
+            Array.Reverse(arrayClone);
+            return arrayClone[K-1];
+
         }
     }
 }
