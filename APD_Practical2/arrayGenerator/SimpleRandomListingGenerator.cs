@@ -14,7 +14,7 @@ namespace APD_Practical2.arrayGenerator
         {
 
             int[] copy = getArray();
-            bool[] used = new bool [base.getSize()];
+            bool[] used = new bool [getSize()];
 
             for(int index = 0; index < getArray().Length;)
             {
