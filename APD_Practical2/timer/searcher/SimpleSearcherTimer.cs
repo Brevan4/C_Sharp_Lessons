@@ -1,4 +1,4 @@
-using APD_Practical2.arrayGenerator;
+﻿using APD_Practical2.arrayGenerator;
 using APD_Practical2.searcher;
 using APD_Practical2.timer.timer;
 using System;
@@ -15,7 +15,7 @@ namespace APD_Practical2.timer.searcher
     {
         // All timings will be done with an index of 5
         private static int K = 5;
-        public SimpleSearcherTimer(int[] array) : base(array, K) { }
+        public SimpleSearcherTimer(int[] array) : base(array, K) { }       
 
         /**
 * We are timing SimpleSearchers.
@@ -34,7 +34,7 @@ namespace APD_Practical2.timer.searcher
         public void timedMethod()
         {
             try { findElement(); }
-            catch (IndexingError indexingError)
+            catch(IndexingError indexingError)
             {
                 // simply ignore indexing errors here
                 // with K at 5, and a minimum task size (array size) of 10, indexing errors should not occur
@@ -74,12 +74,12 @@ namespace APD_Practical2.timer.searcher
         * @throws IndexingError should not happen
         */
 
-        public static void Run()
+        public static void Run() 
         {
             SimpleSearcherTimer timer = new SimpleSearcherTimer(new int[K]);
             ((Timer)timer).timingSequence();
         }
 
-
+       
     }
 }
