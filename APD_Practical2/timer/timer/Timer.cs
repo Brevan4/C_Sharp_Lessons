@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Globalization;
@@ -7,7 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace APD_Practical2.timer.timer
-{
+{    
     /**
  * We are interested in how long our implemented methods take to execute. This
  * interface defines a time method that can be used to time a given method in
@@ -61,7 +61,7 @@ namespace APD_Practical2.timer.timer
         protected TimeSpan time()
         {
             //Stopwatch sw = new S
-            var watch = System.Diagnostics.Stopwatch.StartNew();
+            var watch =  System.Diagnostics.Stopwatch.StartNew();
             timedMethod();
             watch.Stop();
             return watch.Elapsed;
@@ -77,8 +77,8 @@ namespace APD_Practical2.timer.timer
      *                          This should not happen.
      */
 
-        public void timingSequence()
-        {
+    public void timingSequence()
+        {            
             Console.WriteLine("Timg Sequence was called");
             //NumberFormatInfo formatter = new CultureInfo("en-US", false).NumberFormat;
             //formatter.NumberDecimalDigits = 3;
@@ -107,7 +107,7 @@ namespace APD_Practical2.timer.timer
                         Console.WriteLine("Time limit of " + getMaximumRuntime() + " seconds reached. Ending the timing sequence.");
                         return;
                     }
-                }
+                }            
                 counter = 1;
             }
         }
