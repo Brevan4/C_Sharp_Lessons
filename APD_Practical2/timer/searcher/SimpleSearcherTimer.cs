@@ -74,7 +74,7 @@ namespace APD_Practical2.timer.searcher
         * @throws IndexingError should not happen
         */
 
-        public static void RunSimpleSearchTimer() 
+        public static void Run() 
         {
             SimpleSearcherTimer timer = new SimpleSearcherTimer(new int[K]);
             ((Timer)timer).timingSequence();

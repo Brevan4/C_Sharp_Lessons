@@ -12,9 +12,20 @@ namespace APD_Practical2.arrayGenerator
 
         protected override void randomise()
         {
-           // implement simple randomise
-        }        
-    }  
 
-    
+            int[] copy = getArray();
+            bool[] used = new bool [base.getSize()];
+
+            for(int index = 0; index < getArray().Length;)
+            {
+                int randomIndex = getRandomIndex();
+                if(used[randomIndex] == false)
+                {
+                    copy[randomIndex] = index;
+                    used[randomIndex] = true;
+                    index++;
+                }                
+            }
+        }        
+    }        
 }

@@ -42,5 +42,11 @@ namespace APD_Practical2.timer.arrayGenerator
          * We are timing the randomise() method.
          */
         public void timedMethod(){randomise();}
+
+         public static void Run()
+        {
+            CleverRandomListingGeneratorTimer timer = new CleverRandomListingGeneratorTimer(0);
+            ((Timer)timer).timingSequence();
+        }
     }
 }

@@ -11,14 +11,16 @@ namespace APD_Practical2.searcher
     {
         public void RunCheckSearcher()
         {
+            Random ran = new Random();
             int size = 10;
-            int index = 3; // kth largest element
+            int index; // kth largest element
 
             IArrayGenerator generator;
 
             Console.WriteLine("Search SortedListingGenerators: ");
             for(int i = 0; i < 15; i++)
             {
+                index = ran.Next(1, size+1); // kth largest element
                 generator = new SortedListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
                 Searcher searcher = new SimpleSearcher(generator.getArray(), index);
@@ -29,6 +31,7 @@ namespace APD_Practical2.searcher
             Console.WriteLine("Search SimpleRandomListingGenerators: ");
             for (int i = 0; i < 15; i++)
             {
+                index = ran.Next(1, size+1); // kth largest element
                 generator = new SimpleRandomListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
                 Searcher searcher = new SimpleSearcher(generator.getArray(), index);
@@ -39,6 +42,7 @@ namespace APD_Practical2.searcher
             Console.WriteLine("Search CleverRandomListingGenerator: ");
             for (int i = 0; i < 15; i++)
             {
+                index = ran.Next(1, size+1); // kth largest element
                 generator = new CleverRandomListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
                 Searcher searcher = new SimpleSearcher(generator.getArray(), index);
