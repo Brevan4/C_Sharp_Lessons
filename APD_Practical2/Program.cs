@@ -12,7 +12,7 @@ namespace APD_Practical2
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
-           
+            SimpleSearcherTimer.Run();
         }
     }
 }
