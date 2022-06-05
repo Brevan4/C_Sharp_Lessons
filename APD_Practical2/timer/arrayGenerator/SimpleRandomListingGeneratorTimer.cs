@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace APD_Practical2.timer.arrayGenerator
 {
-    class SimpleRandomListingGeneratorTimer: SimpleRandomListingGenerator, Timer
+    class SimpleRandomListingGeneratorTimer : SimpleRandomListingGenerator, Timer
     {
         public SimpleRandomListingGeneratorTimer(int size) : base(size) { }
         /**
@@ -42,5 +42,11 @@ namespace APD_Practical2.timer.arrayGenerator
          * We are timing the randomise() method.
          */
         public void timedMethod() { randomise(); }
+
+        public static void Run()
+        {
+            SimpleRandomListingGeneratorTimer timer = new SimpleRandomListingGeneratorTimer(0);
+            ((Timer)timer).timingSequence();
+        }
     }
 }

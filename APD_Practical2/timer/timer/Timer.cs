@@ -60,10 +60,11 @@ namespace APD_Practical2.timer.timer
          */
         protected TimeSpan time()
         {
-            long startTime = Stopwatch.GetTimestamp();
+            //Stopwatch sw = new S
+            var watch = System.Diagnostics.Stopwatch.StartNew();
             timedMethod();
-            long endTime = Stopwatch.GetTimestamp();
-            return TimeSpan.FromMilliseconds(endTime - startTime);
+            watch.Stop();
+            return watch.Elapsed;
         }
 
         /**
@@ -76,26 +77,32 @@ namespace APD_Practical2.timer.timer
      *                          This should not happen.
      */
 
-    public void timingSequence()
+        public void timingSequence()
         {
-            NumberFormatInfo formatter = new CultureInfo("en-UK", false).NumberFormat;
-            formatter.NumberDecimalDigits = 3;
+            Console.WriteLine("Timg Sequence was called");
+            //NumberFormatInfo formatter = new CultureInfo("en-US", false).NumberFormat;
+            //formatter.NumberDecimalDigits = 3;
             int counter = getMinimumTaskSize();
             int power = 1;
-            while(counter >= 10)
+            while (counter >= 10)
             {
-                for(; counter < 10; counter++)
+                counter = counter / 10;
+                power = power * 10;
+            }
+            for (; ; power = power * 10)
+            {
+                for (; counter < 10; counter++)
                 {
                     Timer timer = getTimer(counter * power);
                     TimeSpan time = timer.time();
-                    string timeString = time.ToString().Substring(2).Replace("S", "seconds");
-                    Console.WriteLine(timer.GetType().Name + " took " + timeString + " for a task of size " + (formatter, power * counter));
-                    if(counter * power >= getMaximumTaskSize())
+                    string timeString = time.ToString();
+                    Console.WriteLine(timer.GetType().Name + " took " + timeString + " for a task of size " + String.Format("{0:n0}", power * counter));
+                    if (counter * power >= getMaximumTaskSize())
                     {
                         Console.WriteLine("Maximum task size, " + getMaximumTaskSize() + ", reached. Ending timing sequence. ");
                         return;
                     }
-                    if(time.TotalSeconds >= getMaximumRuntime())
+                    if (time.TotalSeconds >= getMaximumRuntime())
                     {
                         Console.WriteLine("Time limit of " + getMaximumRuntime() + " seconds reached. Ending the timing sequence.");
                         return;

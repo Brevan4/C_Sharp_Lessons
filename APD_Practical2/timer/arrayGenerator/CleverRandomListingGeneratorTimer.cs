@@ -10,13 +10,13 @@ namespace APD_Practical2.timer.arrayGenerator
 {
     class CleverRandomListingGeneratorTimer : CleverRandomListingGenerator, Timer
     {
-        public CleverRandomListingGeneratorTimer(int size): base(size) { }
+        public CleverRandomListingGeneratorTimer(int size) : base(size) { }
         /**
          * Cease timing when the runtime exceeds 5 seconds.
          *
          * @return 5 seconds as the maximum permitted runtime.
          */
-        public long getMaximumRuntime(){return 5L;}
+        public long getMaximumRuntime() { return 5L; }
 
         /**
         * Cease timing when the array size exceeds 10^9.
@@ -37,10 +37,16 @@ namespace APD_Practical2.timer.arrayGenerator
          * @param size the size of the task to be timed.
          * @return a CleverRandomListingGenerator of the required size.
          */
-        public Timer getTimer(int size){return new CleverRandomListingGeneratorTimer(size);}
+        public Timer getTimer(int size) { return new CleverRandomListingGeneratorTimer(size); }
         /**
          * We are timing the randomise() method.
          */
-        public void timedMethod(){randomise();}
+        public void timedMethod() { randomise(); }
+
+        public static void Run()
+        {
+            CleverRandomListingGeneratorTimer timer = new CleverRandomListingGeneratorTimer(0);
+            ((Timer)timer).timingSequence();
+        }
     }
 }
