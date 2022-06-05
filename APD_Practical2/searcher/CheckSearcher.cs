@@ -1,4 +1,4 @@
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -18,9 +18,9 @@ namespace APD_Practical2.searcher
             IArrayGenerator generator;
 
             Console.WriteLine("Search SortedListingGenerators: ");
-            for (int i = 0; i < 15; i++)
+            for(int i = 0; i < 15; i++)
             {
-                index = ran.Next(1, size + 1); // kth largest element
+                index = ran.Next(1, size+1); // kth largest element
                 generator = new SortedListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
                 Searcher searcher = new SimpleSearcher(generator.getArray(), index);
@@ -31,7 +31,7 @@ namespace APD_Practical2.searcher
             Console.WriteLine("Search SimpleRandomListingGenerators: ");
             for (int i = 0; i < 15; i++)
             {
-                index = ran.Next(1, size + 1); // kth largest element
+                index = ran.Next(1, size+1); // kth largest element
                 generator = new SimpleRandomListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
                 Searcher searcher = new SimpleSearcher(generator.getArray(), index);
@@ -42,12 +42,12 @@ namespace APD_Practical2.searcher
             Console.WriteLine("Search CleverRandomListingGenerator: ");
             for (int i = 0; i < 15; i++)
             {
-                index = ran.Next(1, size + 1); // kth largest element
+                index = ran.Next(1, size+1); // kth largest element
                 generator = new CleverRandomListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
                 Searcher searcher = new SimpleSearcher(generator.getArray(), index);
                 Console.WriteLine(Print.Ordinal(index) + " largest element: " + searcher.findElement());
-            }
+            }            
         }
     }
 }
