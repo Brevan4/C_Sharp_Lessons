@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace APD_Practical2.timer.arrayGenerator
 {
-    class SimpleRandomListingGeneratorTimer: SimpleRandomListingGenerator, Timer
+    class SimpleRandomListingGeneratorTimer : SimpleRandomListingGenerator, Timer
     {
         public SimpleRandomListingGeneratorTimer(int size) : base(size) { }
         /**

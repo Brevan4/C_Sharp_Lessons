@@ -14,11 +14,11 @@ namespace APD_Practical2.arrayGenerator
     {
         public static void Run()
         {
-        int size = 10;
-        IArrayGenerator generator;
+            int size = 10;
+            IArrayGenerator generator;
 
             Console.WriteLine("Print SortedListingGenerator: ");
-            for(int i = 0; i <15; i++)
+            for (int i = 0; i < 15; i++)
             {
                 generator = new SortedListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
@@ -26,7 +26,7 @@ namespace APD_Practical2.arrayGenerator
 
             Console.WriteLine("");
             Console.WriteLine("Print SimpleRandomListingGenerators: ");
-            for(int i =0; i < 15; i++)
+            for (int i = 0; i < 15; i++)
             {
                 generator = new SimpleRandomListingGenerator(size);
                 Console.WriteLine(Print.Array(generator.getArray(), generator.getSize()));
