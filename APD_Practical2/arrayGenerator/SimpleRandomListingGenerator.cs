@@ -12,7 +12,9 @@ namespace APD_Practical2.arrayGenerator
 
         protected override void randomise()
         {
-            // implement simple randomise
-        }
-    }   
+           // implement simple randomise
+        }        
+    }  
+
+    
 }

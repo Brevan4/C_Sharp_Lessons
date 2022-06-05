@@ -13,6 +13,7 @@ namespace APD_Practical2.searcher
         {
             // implement find element
             throw new IndexingError();
+            
         }
     }
 }

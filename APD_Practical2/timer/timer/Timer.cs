@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -63,6 +64,45 @@ namespace APD_Practical2.timer.timer
             timedMethod();
             long endTime = Stopwatch.GetTimestamp();
             return TimeSpan.FromMilliseconds(endTime - startTime);
+        }
+
+        /**
+     * Run a sequence of time tests of increasing size. Task sizes of size 1,2,..,9,
+     * then 10,20,..,90 and so on for increasing powers of ten are timed. The sequence of
+     * tests terminates when the execution time of the randomisation reaches or
+     * surpasses the time limit, or the size of the generator reaches or
+     * surpasses the maximum size.
+     * @throws IndexingError if one of the timed searches has an indexing error.
+     *                          This should not happen.
+     */
+
+    public void timingSequence()
+        {
+            NumberFormatInfo formatter = new CultureInfo("en-UK", false).NumberFormat;
+            formatter.NumberDecimalDigits = 3;
+            int counter = getMinimumTaskSize();
+            int power = 1;
+            while(counter >= 10)
+            {
+                for(; counter < 10; counter++)
+                {
+                    Timer timer = getTimer(counter * power);
+                    TimeSpan time = timer.time();
+                    string timeString = time.ToString().Substring(2).Replace("S", "seconds");
+                    Console.WriteLine(timer.GetType().Name + " took " + timeString + " for a task of size " + (formatter, power * counter));
+                    if(counter * power >= getMaximumTaskSize())
+                    {
+                        Console.WriteLine("Maximum task size, " + getMaximumTaskSize() + ", reached. Ending timing sequence. ");
+                        return;
+                    }
+                    if(time.TotalSeconds >= getMaximumRuntime())
+                    {
+                        Console.WriteLine("Time limit of " + getMaximumRuntime() + " seconds reached. Ending the timing sequence.");
+                        return;
+                    }
+                }
+                counter = 1;
+            }
         }
     }
 }
