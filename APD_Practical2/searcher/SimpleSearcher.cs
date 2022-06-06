@@ -11,8 +11,12 @@ namespace APD_Practical2.searcher
         public SimpleSearcher(int[] array, int K): base(array, K) { }
         public override int findElement()
         {
+
             // implement find element
-            throw new IndexingError();
+            throw new NotImplementedException();
+            
+
+
         }
     }
 }
