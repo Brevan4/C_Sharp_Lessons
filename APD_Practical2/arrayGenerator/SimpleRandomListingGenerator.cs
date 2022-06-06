@@ -13,15 +13,17 @@ namespace APD_Practical2.arrayGenerator
         protected override void randomise()
         {
             // please implement your simple random functoin here
-            // implement simple randomise
-            int[] copy;
-            Boolean[] used;
 
-            for (int i = 0; i <= getArray().Length; i++) ;
+            int[] Copy;
+            bool[] Used;
+
+            for(int i = 0; i < getArray().Length; i++)
+            {
+                int RandomIndex;
+
+            }
+
+
         }
     }        
 }
-
-
-
-
