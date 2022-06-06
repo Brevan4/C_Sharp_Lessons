@@ -14,5 +14,5 @@ namespace APD_Practical2.arrayGenerator
         {
             // implement simple randomise
         }
-    }   
+    }        
 }
