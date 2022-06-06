@@ -43,7 +43,7 @@ namespace APD_Practical2.arrayGenerator
      *         generator.
      */
 
-        int getRandomIndex()
+        public int getRandomIndex()
         {
             return random.Next(getArray().Length);
         }
