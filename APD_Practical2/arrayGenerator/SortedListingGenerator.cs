@@ -11,7 +11,7 @@ namespace APD_Practical2.arrayGenerator
     */
     public class SortedListingGenerator : IListingGenerator
     {
-        private int[] array;
+        protected int[] array;
     /**
      * Create an array of ints of size <tt>size</tt>, and populate it
      * with the values 0..<tt>size</tt>-1.

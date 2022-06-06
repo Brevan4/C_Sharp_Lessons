@@ -1,4 +1,4 @@
-﻿using APD_Practical2.arrayGenerator;
+using APD_Practical2.arrayGenerator;
 using APD_Practical2.searcher;
 using APD_Practical2.timer.arrayGenerator;
 using APD_Practical2.timer.searcher;
