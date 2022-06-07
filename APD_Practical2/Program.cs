@@ -13,7 +13,7 @@ namespace APD_Practical2
         {
             Console.WriteLine("Hello World!");
             CheckGenerator checkGenerator = new CheckGenerator();
-            checkGenerator.Run();
+            CheckGenerator.Run();
 
         }
     }
