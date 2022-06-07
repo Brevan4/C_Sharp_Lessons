@@ -20,9 +20,34 @@ namespace APD_Practical1
         // The Total Sum of all Values
         //The Smallest value
         //The Largest value
-        public void processArrays()
+        public static void ProcessArrays()
         {
-          
+            int arrayDivision;
+            int i = 0;
+
+            double[] C = new double[10];                                                //Creates Array of 10
+            for (i = 0; i < A.Length; i++)                                              //For loop 
+            {
+                arrayDivision = A[i] / B[i];                                            //Sum required - A / B
+                C[i] = arrayDivision;
+            }
+            {
+                Console.WriteLine("\n\n******** Array C ********");
+                Array.ForEach(C, Console.WriteLine);                                    //Prints out entire Array C
+            }
         }
+        public static void PrintArrays()                                                //Method to print our Array details
+        {
+            Console.WriteLine("\n\n******** Array details ********");
+            Console.WriteLine("The average of array A: " + A.Average());
+            Console.WriteLine("The highest value in array A: " + A.Max());
+            Console.WriteLine("The lowest value in array A: " + A.Min());
+            Console.WriteLine("The sum of all values in array A: " + A.Sum());
+            Console.WriteLine("The average of array B: " + B.Average());
+            Console.WriteLine("The highest value in array B: " + B.Max());
+            Console.WriteLine("The lowest value in array B: " + B.Min());
+            Console.WriteLine("The sum of all values in array B: " + B.Sum());
+        }
+    }
     }
 }

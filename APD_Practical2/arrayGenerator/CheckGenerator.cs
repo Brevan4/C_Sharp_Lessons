@@ -12,7 +12,7 @@ namespace APD_Practical2.arrayGenerator
  */
     class CheckGenerator
     {
-        public static void Run()
+        public void Run()
         {
         int size = 10;
         IArrayGenerator generator;
