@@ -20,6 +20,7 @@ namespace APD_Practical2.arrayGenerator
                 array[i] = array[randomIndex];                      //array[i] changes to new array position of random number
                 array[randomIndex] = origIndex;                     //random position becomes original position
                 i++;                                                //increment i by one
+                
             } 
         }      
     }    

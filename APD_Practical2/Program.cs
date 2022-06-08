@@ -14,6 +14,10 @@ namespace APD_Practical2
             Console.WriteLine("Hello World!");
             CheckGenerator checkGenerator = new CheckGenerator();
             CheckGenerator.Run();
+            CheckSearcher checkSearcher = new CheckSearcher();
+            CheckSearcher.Run();
+            SimpleRandomListingGeneratorTimer runTimer = new SimpleRandomListingGeneratorTimer(10);
+            SimpleRandomListingGeneratorTimer.Run();
 
         }
     }

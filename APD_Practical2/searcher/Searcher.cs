@@ -43,13 +43,13 @@ namespace APD_Practical2.searcher
      * Get this Searcher's index.
      * @return the index this searcher is searching for.
      */
-        int getIndex() { return K; }
+        protected int getIndex() { return K; }
 
         /**
      * Find the kth largest entry in the array
      * @return the kth largest element in the array
      * @throws IndexingError if the index, k, is out of bounds
      */
-        abstract public int findElement();
+         public abstract int findElement();
     }
 }
