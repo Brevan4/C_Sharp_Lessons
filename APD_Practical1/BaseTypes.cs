@@ -9,7 +9,7 @@ namespace APD_Practical1
 
     class BaseTypes
     {
-        
+
         static void Casting()
         {
             //1) Remove comments and assign correct datatypes bellow.
@@ -65,7 +65,7 @@ namespace APD_Practical1
 
 
         // add function to print each casting out
-        static void printCast()
+        static void printCast<T>() //ask alex for help
         {
             //Console.WriteLine(cast1);
             //Console.WriteLine(cast2);
@@ -73,7 +73,7 @@ namespace APD_Practical1
 
             char[] charArray =
             {
-
+                Three, Four, 
             }; 
 
         }

@@ -19,7 +19,10 @@ namespace APD_Practical2.arrayGenerator
 
             for(int i = 0; i < getArray().Length; i++)
             {
-                int RandomIndex;
+                int randomIndex;
+
+
+
 
             }
 
