@@ -12,7 +12,11 @@ namespace APD_Practical2.arrayGenerator
 
         protected override void randomise()
         {
-            // Implement clever randomise           
+            // Implement clever randomise
+            // 
+            int[] array;
+
+
         }
     }    
 }
